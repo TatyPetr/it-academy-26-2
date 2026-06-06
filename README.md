@@ -4,6 +4,7 @@
 Установка зависимостей
 Для установки зависимостей, выполните команду:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 Запуск Development сервера
 Чтобы запустить сервер для разработки, выполните команду:
@@ -33,5 +34,7 @@ Contributing
 >>>>>>> main
 >>>>>>> parent of dda62c7 (updated readme.md)
 >>>>>>> main
+=======
+>>>>>>> parent of b1d9420 (added file readme.md)
 =======
 >>>>>>> parent of b1d9420 (added file readme.md)
