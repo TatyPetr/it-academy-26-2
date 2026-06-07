@@ -1,3 +1,4 @@
+//Task 2
 const fs = require('fs-extra');
 
 fs.ensureDirSync('folder1');
