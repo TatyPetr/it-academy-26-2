@@ -23,3 +23,4 @@ console.log('Удалили файлы');
 fs.removeSync('folder1');
 fs.removeSync('folder2');
 fs.removeSync('folder3');
+console.log('Удалили папки');
