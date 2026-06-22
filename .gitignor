@@ -1,0 +1,4 @@
+finalTest.js
+node_modules/ 
+.env 
+coverage/
