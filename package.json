@@ -1,0 +1,25 @@
+{
+  "name": "it-academy-26-2",
+  "version": "1.0.0",
+  "description": "Для установки и запуска проекта, необходим NodeJS v8+",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node fs-extra-task.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TatyPetr/it-academy-26-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TatyPetr/it-academy-26-2/issues"
+  },
+  "homepage": "https://github.com/TatyPetr/it-academy-26-2#readme",
+  "dependencies": {
+    "fs-extra": "^11.3.5"
+  }
+}
