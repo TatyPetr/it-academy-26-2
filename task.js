@@ -1,4 +1,5 @@
 const fs = require('fs-extra');
+
 fs.ensureDirSync('folder1');
 console.log('Создали папку folder1');
 fs.writeFileSync('folder1/text.txt', 'Привет, это текстовый файл');
