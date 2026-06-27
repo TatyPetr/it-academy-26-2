@@ -56,7 +56,85 @@ for (let i = 0; i < secretDigits.length; i++) {
 console.log ('Same position:', samePosition);
 console.log ('Same value but different position:',sameValuePosition);
 
-//Task 5
+//Task 5 Sort and filter users
+const users = [
+  { name: "Alex", age: 25, city: "Warsaw" },
+  { name: "Maria", age: 32, city: "Gdansk" },
+  { name: "John", age: 19, city: "Berlin" },
+  { name: "Oleg", age: 41, city: "Warsaw" },
+  { name: "Anna", age: 25, city: "Krakow" }
+];
+ 
+const usersByAgeAsc = users.slice().sort(function(a, b) {
+//Создаем новую переменную usersByAgeAsc, в нее записываем пользователей по возрасту по возрастанию
+//users.slice() создает копию массива, сортируем копию массива с помощью sort()
+//и функции сравнения, чтобы не изменять исходный массив
+  return a.age - b.age;
+});
+ 
+const usersByAgeDesc = users.slice().sort(function(a, b) {
+  return b.age - a.age;
+});
+//аналогично делаем сортировку по возрастe по убыванию
+ 
+const usersByName = users.slice().sort(function(a, b)
+//Создаем новую переменную usersByName, в которой пользователи будут отсортированы по имени
+ {
+  if (a.name > b.name) {
+    return 1;
+    // возвращаем return 1, чтобы поставить a после b
+  }
+  if (a.name < b.name) {
+    return -1;
+    // возвращаем return -1, чтобы поставить a перед b
+  }
+  return 0;
+  // возвращаем return 0, чтобы ничего не менять, когда имена одинаковые
+});
+
+ 
+const userNames = [];
+for (let i = 0; i < users.length; i++) {
+  userNames.push(users[i].name);
+}
+ 
+const usersOlderThan25 = [];
+for (let i = 0; i < users.length; i++) {
+  if (users[i].age > 25) {
+    usersOlderThan25.push(users[i]);
+  }
+  //Добавлем имя текущего пользователя в конец массива, 
+  //если выполняется условие возраст >25
+}
+ 
+let firstUserFromWarsaw = null;
+//создаем переменную firstUserFromWarsaw и присваиваем ей значение null, 
+// потому что пока нужный пользователь не найден
+ 
+for (let i = 0; i < users.length; i++) {
+//запускаем цикл по всем пользователям
+  if (users[i].city === "Warsaw") {
+    //проверяем у текущего пользователя свойство city
+    firstUserFromWarsaw = users[i];
+    break;
+    //останавливаем цикл, если найден пользователь из Варшавы
+  }
+}
+
+console.log("Users sorted by age ascending");
+console.log(usersByAgeAsc);
+console.log("Users sorted by age descending");
+console.log(usersByAgeDesc);
+console.log("Users sorted by name");
+console.log(usersByName);
+console.log("User names");
+console.log(userNames);
+console.log("Users older than 25");
+console.log(usersOlderThan25);
+console.log("First user from Warsaw");
+console.log(firstUserFromWarsaw);
+
+//Task 6
 const products = [
   { id: 1, title: "Phone", price: 1200, category: "electronics" },
   { id: 2, title: "Laptop", price: 2500, category: "electronics" },
@@ -122,8 +200,6 @@ categoryCount[category] = 1;
 }
 }
 console.log (categoryCount);
-
-//Task 6
 const oneProduct = uniqueProducts[2];
 console.log ('Object keys:')
 console.log (Object.keys(oneProduct));
