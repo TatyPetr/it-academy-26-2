@@ -1,0 +1,22 @@
+const bookSchema = {
+  type: "object",
+  required: [
+    "id",
+    "title",
+    "description",
+    "pageCount",
+    "excerpt",
+    "publishDate"
+  ],
+  properties: {
+    id: { type: "integer" },
+    title: { type: "string" },
+    description: { type: "string" },
+    pageCount: { type: "integer" },
+    excerpt: { type: "string" },
+    publishDate: { type: "string" }
+  },
+  additionalProperties: true
+};
+ 
+module.exports = bookSchema;
