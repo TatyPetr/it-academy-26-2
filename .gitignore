@@ -1,0 +1,4 @@
+node-modules/
+main.js
+.env
+test-results/
